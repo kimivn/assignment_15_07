@@ -16,13 +16,6 @@ const persistedReducer = persistReducer(persistConfig, RootReducer);
 
 const middlewares = [thunk, logger];
 
-// if (__DEV__) {
-//   const createDebugger = require("redux-flipper").default;
-//   middlewares.push(createDebugger());
-// }
-
-const middleware = applyMiddleware(thunk, logger);
-
 export const store = createStore(
   persistedReducer,
   applyMiddleware(...middlewares),

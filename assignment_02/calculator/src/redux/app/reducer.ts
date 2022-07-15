@@ -11,7 +11,6 @@ export const appReducer: Reducer<AppState, AppActionTypes> = (
   action: AppActionTypes,
 ): AppState => {
   const {type, payload} = action;
-  console.log(1111, [...state.list_calculation, payload]);
   switch (type) {
     case SAVE_DATA_CALCULATE:
       return {

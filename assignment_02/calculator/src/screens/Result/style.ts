@@ -23,7 +23,7 @@ export default StyleSheet.create({
     marginLeft: 15,
   },
   textResult: {
-    fontSize: 30,
+    fontSize: 26,
     color: 'red',
     textAlign: 'right',
   },

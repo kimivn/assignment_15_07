@@ -16,14 +16,11 @@ const NUMBERS = [
 
 const CalculateScreen = () => {
   const [valueResult, setValueResult] = useState('');
-  const [dataResult, setDataResult] = useState([]);
   const dispatch = useDispatch();
-
-  console.log({valueResult, dataResult});
 
   const calculateResult = () => {
     if (valueResult && valueResult !== '') {
-      const valueCalculation = eval(valueResult);
+      const valueCalculation = eval(valueResult).toString();
       const nCalculation: CalculationItem = {
         calculate: valueResult,
         result: valueCalculation,
@@ -34,8 +31,8 @@ const CalculateScreen = () => {
   };
 
   const validate = () => {
-    const text = valueResult;
-    if (text) {
+    if (valueResult) {
+      const text = valueResult;
       switch (text.slice(-1)) {
         case '+':
         case '-':

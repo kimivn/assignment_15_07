@@ -22,6 +22,7 @@ export default StyleSheet.create({
   valueResult: {
     fontSize: 30,
     color: 'black',
+    marginRight: 8,
   },
   calculationText: {
     fontSize: 24,
@@ -51,6 +52,7 @@ export default StyleSheet.create({
     flex: 3,
     justifyContent: 'space-around',
     backgroundColor: '#636363',
+    paddingVertical: 16,
   },
   white: {
     color: 'white',

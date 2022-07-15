@@ -9,8 +9,6 @@ const ResultScreen = () => {
     (state: ReduxState) => state.app.list_calculation,
   );
 
-  console.log({list_calculation});
-
   const renderItem = ({
     item,
     index,
@@ -36,7 +34,8 @@ const ResultScreen = () => {
         <FlatList
           data={list_calculation}
           renderItem={renderItem}
-          keyExtractor={item => item.calculate}
+          keyExtractor={(item, index) => `${item.calculate}_${index}`}
+          showsVerticalScrollIndicator={false}
         />
       </View>
     </View>
